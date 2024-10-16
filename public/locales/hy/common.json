@@ -1,0 +1,13 @@
+{
+  "welcome": "Բարի գալուստ",
+  "home": "Գլխավոր",
+  "dynamicPage": "Դինամիկ էջ",
+  "ssrPage": "SSR էջ",
+  "language": "Լեզու",
+  "english": "Անգլերեն",
+  "armenian": "Հայերեն",
+  "switchLanguage": "Փոխել լեզուն",
+  "themeToggle": "Փոխել թեման",
+  "title": "React i18next Server Side Rendering Օրինակ",
+  "description": "Օրինակ, թե ինչպես իրականացնել պարզ բազմալեզու կարգավորում"
+}

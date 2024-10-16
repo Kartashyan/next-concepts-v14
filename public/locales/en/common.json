@@ -1,0 +1,13 @@
+{
+  "welcome": "Welcome",
+  "home": "Home",
+  "dynamicPage": "Dynamic Page",
+  "ssrPage": "SSR Page",
+  "language": "Language",
+  "english": "English",
+  "armenian": "Armenian",
+  "switchLanguage": "Switch Language",
+  "themeToggle": "Toggle Theme",
+  "title": "React i18next Server Side Rendering Example",
+  "description": "An example of how to implement a simple multilingual setup"
+}

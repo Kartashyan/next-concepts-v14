@@ -1,0 +1,40 @@
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navLinks li {
+  display: inline;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navLinks a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.langButton {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.langButton:hover {
+  background-color: #777;
+}

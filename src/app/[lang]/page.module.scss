@@ -11,6 +11,10 @@ $primary-color: #9c0087;
 }
 .main {
   padding: 20px;
+  .container {
+    padding: 2rem;
+    text-align: center;
+  }
 }
 .footer {
   background-color: $primary-color;
