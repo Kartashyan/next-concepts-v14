@@ -1,4 +1,6 @@
 $primary-color: #9c0087;
+$secondary-color: #f0f0f0;
+$text-color: #333;
 
 .header {
   background-color: $primary-color;
@@ -9,13 +11,41 @@ $primary-color: #9c0087;
     font-size: 2rem;
   }
 }
+
 .main {
   padding: 20px;
+  background-color: $secondary-color;
+  color: $text-color;
+
   .container {
     padding: 2rem;
     text-align: center;
   }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .welcomeMessage {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .languageSwitcher {
+    margin-top: 2rem;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
+
 .footer {
   background-color: $primary-color;
   padding: 20px;
