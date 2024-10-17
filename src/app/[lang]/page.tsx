@@ -28,7 +28,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <p className={styles.welcomeMessage}>{dictionary.home.welcomeMessage}</p>
         <nav className={styles.navbar}>
           {Object.entries<Record<string, string>>(dictionary).map(([key, value]) => (
-            <Link key={key} href={`/${lang}/${key}`}>
+            <Link key={key} href={`/${lang}/${key === "home" ? "" : key}`}>
               {value.title}
             </Link>
           ))}
