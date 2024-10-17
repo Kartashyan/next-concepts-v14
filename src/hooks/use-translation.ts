@@ -2,7 +2,7 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { i18n } from '../../i18n-config';
 
-type Translations = { [key: string]: string };
+type Translations = { [key: string]: string | Translations };
 
 export const useTranslation = () => {
   const { lang } = useParams();
@@ -18,7 +18,23 @@ export const useTranslation = () => {
     loadTranslations();
   }, [lang, defaultLocale]);
 
-  const t = (key: string) => translations[key] || key;
+  const t = (key: string): string => {
+    const keys = key.split('.');
+    let result: Translations | string = translations;
+
+    for (const k of keys) {
+      if (typeof result === 'object' && result !== null && k in result) {
+        result = result[k];
+      } else {
+        return key;
+      }
+      if (result === undefined) {
+        return key;
+      }
+    }
+
+    return typeof result === 'string' ? result : key;
+  };
 
   return { t, locale: lang || defaultLocale };
 };
