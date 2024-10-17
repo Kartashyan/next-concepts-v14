@@ -1,0 +1,38 @@
+@import 'variables';
+.languageSwitcher {
+  margin-top: 2rem;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: $background-primary-color;
+  color: $secondary-color;
+  padding: 1rem;
+  text-align: center;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: $background-primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 1rem;
+}
