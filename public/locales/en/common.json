@@ -1,8 +1,20 @@
 {
-  "homePage": {
-    "title": "Welcome to Our Website!",
+  "home": {
+    "title": "Homepage",
     "description": "This is the English version of our homepage.",
     "welcomeMessage": "Hello! This is some static content.",
     "switchLang": "Switch to Armenian"
+  },
+  "static": {
+    "title": "Static Page",
+    "description": "This is a static page."
+  },
+  "ssr": {
+    "title": "SSR Page",
+    "description": "This is a server-side rendered page."
+  },
+  "isr": {
+    "title": "ISR Page",
+    "description": "This is an incremental static regenerated page."
   }
 }
