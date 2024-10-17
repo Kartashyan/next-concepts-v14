@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { lang: string } }) {
       }}
     >
       {posts.map((post: { id: string; title: string; body: string }) => (
-        <Link key={post.id} href={`/${params.lang}/posts/${post.id}`}>
+        <Link key={post.id} href={`/${params.lang}/isr/${post.id}`}>
           <div>
             <p>{post.title}</p>
             <p>{post.body}</p>
