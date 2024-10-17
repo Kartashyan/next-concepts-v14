@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   const dictionary = await getDictionary(params.lang);
 
   return {
-    title: dictionary.homePage.title,
-    description: dictionary.homePage.description,
+    title: dictionary.home.title,
+    description: dictionary.home.description,
   };
 }
 
@@ -23,20 +23,17 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>{dictionary.homePage.title}</h1>
-      <p className={styles.welcomeMessage}>{dictionary.homePage.welcomeMessage}</p>
-
-      <nav className={styles.languageSwitcher}>
-        {lang === "en" ? (
-          <Link href={`/${"hy"}`} locale={false}>
-            {dictionary.homePage.switchLang}
-          </Link>
-        ) : (
-          <Link href={`/${"en"}`} locale={false}>
-            {dictionary.homePage.switchLang}
-          </Link>
-        )}
-      </nav>
+      <div className={styles.container}>
+        <h1 className={styles.title}>{dictionary.home.title}</h1>
+        <p className={styles.welcomeMessage}>{dictionary.home.welcomeMessage}</p>
+        <nav className={styles.navbar}>
+          {Object.entries<Record<string, string>>(dictionary).map(([key, value]) => (
+            <Link key={key} href={`/${lang}/${key}`}>
+              {value.title}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </main>
   );
 }

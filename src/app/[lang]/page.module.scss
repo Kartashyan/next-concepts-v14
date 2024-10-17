@@ -1,6 +1,4 @@
-$primary-color: #9c0087;
-$secondary-color: #f0f0f0;
-$text-color: #333;
+@import 'variables';
 
 .header {
   background-color: $primary-color;
@@ -32,13 +30,16 @@ $text-color: #333;
     margin-bottom: 2rem;
   }
 
-  .languageSwitcher {
-    margin-top: 2rem;
+  .navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 
     a {
       color: $primary-color;
       text-decoration: none;
       font-weight: bold;
+      margin: 0 1rem;
       &:hover {
         text-decoration: underline;
       }

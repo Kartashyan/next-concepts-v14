@@ -1,0 +1,43 @@
+$primary-color: #9c0087;
+$secondary-color: #f0f0f0;
+$text-color: #333;
+
+.gridContainer {
+  column-count: 3;
+  column-gap: 1rem;
+  padding: 1rem;
+
+  @media (max-width: 1200px) {
+    column-count: 2;
+  }
+
+  @media (max-width: 768px) {
+    column-count: 1;
+  }
+}
+
+.postCard {
+  background-color: $secondary-color;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.postTitle {
+  font-size: 1.5rem;
+  color: $primary-color;
+  margin-bottom: 0.5rem;
+}
+
+.postBody {
+  font-size: 1rem;
+  color: $text-color;
+}
