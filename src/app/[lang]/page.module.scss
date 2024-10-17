@@ -43,6 +43,9 @@
       &:hover {
         text-decoration: underline;
       }
+      &:first-child {
+        display: none;
+      }
     }
   }
 }
